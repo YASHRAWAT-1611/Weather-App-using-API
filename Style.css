@@ -1,0 +1,114 @@
+/* Basic Reset and Variables */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74a0e9, #4971a8); /* Simple gradient background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.weather-container {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent card */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Location Header */
+#location-name {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Current Weather Section */
+.current-weather {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+.main-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.temperature {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.2em;
+    margin: 5px 0 15px 0;
+    text-transform: capitalize;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Hourly Forecast Section - The Interactive Part */
+h3 {
+    margin-top: 0;
+    text-align: left;
+    font-weight: normal;
+}
+
+.hourly-forecast {
+    display: flex;
+    overflow-x: auto; /* Makes the hourly forecast horizontally scrollable */
+    padding-bottom: 10px; /* Space for the scrollbar */
+    gap: 10px;
+    border-radius: 8px;
+    /* Custom scrollbar styling (optional) */
+    scrollbar-color: #6a95e7 transparent;
+    scrollbar-width: thin;
+}
+
+.hourly-item {
+    flex: 0 0 auto; /* Prevents items from stretching/shrinking */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    width: 80px; /* Fixed width for each hour card */
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.hourly-item:hover {
+    transform: translateY(-5px); /* Interactive hover effect */
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.hourly-time {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.hourly-temp {
+    font-size: 1.2em;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #ffdd57;
+    margin-top: 20px;
+    font-weight: bold;
+}
